@@ -1,0 +1,71 @@
+# Piper 6-DOF (agx_motor_sdk ArmJointGroup).
+# Limits: factory joint limit preset [rad]
+# profile_vel: URDF velocity=5; torque_k/b: factory calibration.
+# torque_limit: joint torque cap [N·m] → current via torque_k × torque_b.
+
+piper:
+  can_channel: can0
+  profile_vel: 5.0
+  profile_accel: 5.0
+  profile_decel: 5.0
+  mit_tf: 16.0
+  mit_kp: 10.0
+  mit_kd: 0.8
+  joints:
+    - joint_name: joint1
+      node_id: 1
+      polarity: -1.0
+      lower_limit: -2.617994
+      upper_limit: 2.617994
+      profile_vel: 3.14
+      torque_k: 1.18125
+      torque_b: 4.0
+      torque_limit: 16.0
+
+    - joint_name: joint2
+      node_id: 2
+      polarity: -1.0
+      lower_limit: 0.0
+      upper_limit: 3.141593
+      profile_vel: 3.14
+      torque_k: 1.18125
+      torque_b: 4.0
+      torque_limit: 16.0
+
+    - joint_name: joint3
+      node_id: 3
+      lower_limit: -2.967060
+      upper_limit: 0.0
+      profile_vel: 3.14
+      torque_k: 1.18125
+      torque_b: 4.0
+      torque_limit: 16.0
+
+    - joint_name: joint4
+      node_id: 4
+      polarity: -1.0
+      lower_limit: -1.745330
+      upper_limit: 1.745330
+      profile_vel: 5.0
+      torque_k: 0.95844
+      torque_b: 1.0
+      torque_limit: 8.0
+
+    - joint_name: joint5
+      node_id: 5
+      lower_limit: -1.221730
+      upper_limit: 1.221730
+      profile_vel: 5.0
+      torque_k: 0.95844
+      torque_b: 1.0
+      torque_limit: 8.0
+
+    - joint_name: joint6
+      node_id: 6
+      polarity: -1.0
+      lower_limit: -2.094396
+      upper_limit: 2.094396
+      profile_vel: 5.0
+      torque_k: 0.95844
+      torque_b: 1.0
+      torque_limit: 8.0

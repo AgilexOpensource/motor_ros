@@ -1,0 +1,82 @@
+# Nero 7-DOF (agx_motor_sdk ArmJointGroup).
+# Limits: factory joint limit preset [rad]
+# profile_vel: URDF velocity=5; torque_k/b: factory calibration.
+# torque_limit: joint torque cap [N·m] → current via torque_k × torque_b.
+
+nero:
+  can_channel: can0
+  profile_vel: 3.14
+  profile_accel: 5.0
+  profile_decel: 5.0
+  mit_tf: 16.0
+  mit_kp: 10.0
+  mit_kd: 0.8
+  joints:
+    - joint_name: joint1
+      node_id: 1
+      polarity: -1.0
+      lower_limit: -2.705261
+      upper_limit: 2.705261
+      profile_vel: 3.14
+      torque_k: 1.65400
+      torque_b: 2.85714
+      torque_limit: 20.0
+
+    - joint_name: joint2
+      node_id: 2
+      polarity: -1.0
+      lower_limit: -1.745330
+      upper_limit: 1.745330
+      profile_vel: 3.14
+      torque_k: 1.65494
+      torque_b: 2.85714
+      torque_limit: 20.0
+
+    - joint_name: joint3
+      node_id: 3
+      polarity: -1.0
+      lower_limit: -2.757621
+      upper_limit: 2.757621
+      profile_vel: 3.14
+      torque_k: 2.10163
+      torque_b: 2.0
+      torque_limit: 16.0
+
+    - joint_name: joint4
+      node_id: 4
+      polarity: -1.0
+      lower_limit: -1.012291
+      upper_limit: 2.146755
+      profile_vel: 3.14
+      torque_k: 2.09865
+      torque_b: 2.0
+      torque_limit: 16.0
+
+    - joint_name: joint5
+      node_id: 5
+      polarity: -1.0
+      lower_limit: -2.757621
+      upper_limit: 2.757621
+      profile_vel: 3.92
+      torque_k: 2.63578
+      torque_b: 0.66667
+      torque_limit: 8.0
+
+    - joint_name: joint6
+      node_id: 6
+      lower_limit: -0.733039
+      upper_limit: 0.959932
+      profile_vel: 3.92
+      torque_k: 2.63578
+      torque_b: 0.66667
+      torque_limit: 8.0
+
+    - joint_name: joint7
+      node_id: 7
+      polarity: -1.0
+      lower_limit: -1.570797
+      upper_limit: 1.570797
+      profile_vel: 3.92
+      torque_k: 2.63578
+      torque_b: 0.62112
+      torque_limit: 8.0
