@@ -1,0 +1,20 @@
+# Example: 1-DOF motor module.
+# File default.yaml → set module_key:=motor (YAML top-level key).
+
+motor:
+  can_channel: can0
+  profile_vel: 5.0
+  profile_accel: 5.0
+  profile_decel: 5.0
+  mit_tf: 16.0
+  mit_kp: 10.0
+  mit_kd: 0.8
+  torque_k: 1.0
+  torque_b: 1.0
+  joints:
+    - joint_name: joint
+      node_id: 1
+      polarity: 1.0
+      lower_limit: -1.57
+      upper_limit: 1.57
+      torque_limit: 6.0

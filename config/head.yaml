@@ -1,0 +1,25 @@
+# Example: 2-DOF head module (YAML key must match filename stem: head).
+
+head:
+  can_channel: can0
+  profile_vel: 5.0
+  profile_accel: 5.0
+  profile_decel: 5.0
+  mit_tf: 16.0
+  mit_kp: 10.0
+  mit_kd: 0.8
+  torque_k: 2.63578
+  torque_b: 0.62107
+  joints:
+    - joint_name: head_joint1
+      node_id: 6
+      polarity: -1.0
+      lower_limit: -0.523
+      upper_limit: 1.396
+      torque_limit: 6.0
+    - joint_name: head_joint2
+      node_id: 7
+      polarity: -1.0
+      lower_limit: -1.57
+      upper_limit: 1.57
+      torque_limit: 6.0

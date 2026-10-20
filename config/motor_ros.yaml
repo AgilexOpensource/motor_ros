@@ -1,0 +1,13 @@
+# /**/motor_node matches motor_node in any namespace.
+/**/motor_node:
+  ros__parameters:
+    yaml_path: default.yaml
+    module_key: motor
+    can_channel: can0
+    auto_configure: true
+    auto_enable: true
+    feedback_rate: 100.0
+    status_rate: 2.0
+    status_timeout: 2.0
+    control_mode: pos
+    control_enabled: true
